@@ -1,0 +1,169 @@
+body{
+    background: #f4f6f9;
+    font-family: "Unbounded", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.perfil{
+    width: 700px;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.topo{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#foto{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.dados{
+    flex: 1;
+}
+
+.dados h1{
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.dados p{
+    line-height: 1.6;
+}
+
+.caixa{
+    margin-top: 20px;
+    background: #fafafa;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.caixa h2{
+    background: #eceff3;
+    color: #000000;
+    padding: 12px 18px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.caixa p,
+.caixa ul{
+    padding: 15px 18px;
+    margin: 0;
+}
+
+.caixa ul{
+    list-style: none;
+}
+
+.caixa li{
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.caixa li:last-child{
+    border-bottom: none;
+}
+
+#corFavorita{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin: 15px;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Entrada do card */
+.perfil{
+    animation: surgir 1s ease;
+}
+
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Foto flutuando */
+#foto{
+    animation: flutuar 4s ease-in-out infinite;
+    transition: 0.4s;
+}
+
+#foto:hover{
+    transform: scale(1.05);
+}
+
+@keyframes flutuar{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+/* Caixas com efeito ao passar o mouse */
+.caixa{
+    transition: 0.4s;
+}
+
+.caixa:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Nome brilhando suavemente */
+.dados h1{
+    animation: brilho 3s ease-in-out infinite;
+}
+
+@keyframes brilho{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+}
+
+.runner{
+    position: fixed;
+    bottom: 20px;
+    width: 90px;
+    pointer-events: none;
+    z-index: 1;
+
+    filter:
+        drop-shadow(0 0 3px white)
+        drop-shadow(0 0 6px white);
+
+    animation: pular 0.5s infinite alternate;
+}
+
+@keyframes pular{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-15px);
+    }
+}

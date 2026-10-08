@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+body {
+    font-family: "Unbounded", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    transform: scale(1.09);
+}
+
+label{
+    color: #630644;
+}
+
+form {
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 3%;
+    display: block;
+    text-align: center;
+    background-color: rgb(255, 164, 225);
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+    resize: none;
+}
+
+input,
+textarea {
+    border: none;
+    border-radius: 3px;
+    color: #333;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: rgb(236, 172, 228);
+    text-align: center;
+    font-family: sans-serif;
+}
+footer {
+    margin-top: 20px;
+    padding: 15px 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
